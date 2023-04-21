@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predefined global functions</title>
+</head>
+<body>
+
+
+EXAMPLE #1
+{{range .}}
+    {{.}}
+{{end}}
+
+
+EXAMPLE #2
+{{if .}}
+    EXAMPLE #2 - {{.}}
+{{end}}
+
+EXAMPLE #3
+{{range .}}
+    {{if .Model}}
+       EXAMPLE #3 - {{.Model}}
+    {{end}}
+{{end}}
+
+
+EXAMPLE #4
+{{range .}}
+    {{if and .Model .Automatic}}
+        EXAMPLE #4 - Model: {{.Model}}
+        EXAMPLE #4 - Type: {{.Type}}
+        EXAMPLE #4 - Automatic: {{.Automatic}}
+    {{end}}
+{{end}}
+
+
+</body>
+</html>
